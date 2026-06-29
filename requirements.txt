@@ -1,0 +1,9 @@
+streamlit
+fastapi
+torchvision
+numpy
+pillow
+python-multipart
+psycopg2-binary
+uvicorn
+sqlachemy
