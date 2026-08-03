@@ -1,17 +1,21 @@
+import os
 import logging
 from logging.handlers import RotatingFileHandler
-from pathlib import Path
 
-APP_DIR = Path(__file__).resolve().parent.parent
-LOG_DIR = APP_DIR / "logs"
-LOG_FILE = LOG_DIR / "application.log"
+APP_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+LOG_DIR = os.path.join(APP_DIR, "logs")
+
+if not os.path.exists(LOG_DIR):
+    os.makedirs(LOG_DIR)
+LOG_FILE = os.path.join(LOG_DIR, "application.log")
 
 
 def setup_logging():
     logging.basicConfig(
         filename=LOG_FILE,
-        level=settings.LOG_LEVEL,
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+        level=logging.DEBUG,
+        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+        
     )
 
     logger = logging.getLogger(__name__)
