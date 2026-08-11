@@ -2,7 +2,7 @@
 
 # LA DOUANE BÉNINOISE
 
-![DOUANE BÉNINOISE](/Beninx-compressor-2-2.jpg)
+![DOUANE BÉNINOISE](/images/Beninx-compressor-2-2.jpg)
 
 </div>
 
@@ -21,7 +21,7 @@ Lorsqu’on tient compte du montant des pertes de recettes engendrées par lesdi
 1.  La mise en œuvre depuis mai 2019, du Programme National des Opérateurs Économiques Agréés (OEA).
 
 (02) La mise en ligne de **Sydonia world** qui permet aujourd’hui aux commissionnaires en douane agréés d’avoir accès sans contrainte à l’outil de dédouanement partout où ils se trouvent ;
-![sydonia world](/images.jpeg)
+![sydonia world](/images/images.jpeg)
 
 (03) L’exigence de l’ordre de dédouanement des marchandises à signer par les importateurs avec les pièces justificatives afférentes pour renforcer la lutte contre la production de faux documents et contre l’utilisation abusive des numéros IFU lors des opérations de dédouanement ;
 
@@ -45,7 +45,7 @@ Alors moi je pose plusieurs question aujourd'hui, demain et pour toujours,
 
 ### A-Quelles sont les reformes numérique ou digitale que proposent le gouvernement à l'endroit de la douane dans les **05 Prochaines années** à venir ?
 
-![plan 2030 de la DOUANE](/plan-douanes-2030-1140x570.jpg)
+![plan 2030 de la DOUANE](/images/plan-douanes-2030-1140x570.jpg)
 
 La réponse je l'ai partiellement:
 
@@ -68,13 +68,13 @@ La réponse je l'ai partiellement:
 #### A-5 Généralisation du système intelligent << Customs Webb >>:
 
 Le Customs Webb développée par Webb Fontaine constituera désormais le coeur technologique de la douane.
-![http://webbfontaine.com/news/2022/webb-fontaine-awarded-contract-with-benin-government-for-implementation-of-new-customs-system-in-replacement-of-asycuda-world](/PHOTO-2022-07-09-01-08-15-1.jpg)
+![http://webbfontaine.com/news/2022/webb-fontaine-awarded-contract-with-benin-government-for-implementation-of-new-customs-system-in-replacement-of-asycuda-world](/images/PHOTO-2022-07-09-01-08-15-1.jpg)
 
 ### 2- PROBLÉMATIQUES
 
 <div align='center' style="width: 80%; height: 50% object-fit: rounded; border-radius: 50%;">
 
-![problems](/problems.jpeg)
+![problems](/images/problems.jpeg)
 
 </div>
 Là le problème devient encore très interressant et beaucoup plus interressant.
