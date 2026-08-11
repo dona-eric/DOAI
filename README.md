@@ -84,28 +84,30 @@ Ce serait contre-productif de se demander aujourd'hui **Comment digitaliser la d
 
 Voici donc les axes que j'explorerais d'avantage :
 
-##### 1- Malgré les réformes engagées et la numérisation croissante des procédures, quelles zones d'ombres, lenteurs, contraintes, taches repétitives, risques d'erreur et points de blocage persistent dans les opérations douanières ? \*
+> 📌 **1-** Malgré les réformes engagées et la numérisation croissante des procédures, quelles zones d'ombres, lenteurs, contraintes, taches repétitives, risques d'erreur et points de blocage persistent dans les opérations douanières ? *
 
-                ou encore
+<div align="center"><i>— ou encore —</i></div>
 
-##### 2- Quels leviers technologiques pourraient encore améliorer la simplication, la sécuration, la traçabilité et l'éfficacité des opérations douanières ?
+> ⚙️ **2-** Quels leviers technologiques pourraient encore améliorer la simplication, la sécuration, la traçabilité et l'éfficacité des opérations douanières ?
 
-                et ensuite
+<div align="center"><i>— et ensuite —</i></div>
 
-##### 3- Dans quelle mesure l'intelligence artificielle, l'automatisation et l'exploitation intelligente des données pourraient-elles contribuer à repondre à des besoins résiduels ?
+> 🚀 **3-** Dans quelle mesure l'intelligence artificielle, l'automatisation et l'exploitation intelligente des données pourraient-elles contribuer à repondre à des besoins résiduels ?
+
 
 ### 3- THE SOLUTIONS PROPOSED
 
 Mes solutions proposées pour le moment sont de deux niveaux, à savoir:
 
-**Niveau 1: Intelligence**
-Détecter les incohérences dans les documents, les anomalies et les risques potentiels dans les opérations douanières, en utilisant l'intelligence artificielle et l'analyse des données.
+> 💡 **Niveau 1: Intelligence**  
+> Détecter les incohérences dans les documents, les anomalies et les risques potentiels dans les opérations douanières, en utilisant l'intelligence artificielle et l'analyse des données.
 
-**Niveau 2: Automatisation**(À valider)
-Automatiser les tâches répétitives et chronophages, en utilisant l'automatisation et l'intelligence artificielle.
+> ⚡ **Niveau 2: Automatisation** *(À valider)*  
+> Automatiser les tâches répétitives et chronophages, en utilisant l'automatisation et l'intelligence artificielle.
 
-Le diagnostic :
+---
 
-**Acteur --> Activité --> Document ou Gestion --> Données(essentielle) --> Système --> Difficulté --> Risques --> Opportunité numérique.**
+#### 🔍 Le diagnostic :
 
-[def]: /PHOTO-2022-07-09-01-08-15-1.jpg
+`Acteur` ➔ `Activité` ➔ `Document ou Gestion` ➔ `Données(essentielle)` ➔ `Système` ➔ `Difficulté` ➔ `Risques` ➔ `Opportunité numérique`
+
