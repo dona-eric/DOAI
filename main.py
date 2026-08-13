@@ -1,18 +1,21 @@
-def main():
-    from transformers import pipeline
-    
-    
-    generator = pipeline("text-generation", model="HuggingFaceTB/SmolLM2-360M")
-    prompt = """
-    In this course, we will teach you how to"""
+phrase = "je dois reussir ma carrière d'ingénieur ia"
+voyelles = "aeiou"
 
-    result = generator(
-        prompt=prompt,
-        max_length=30,
-        num_return_sequences=2,
-    )
-    print(result[0]['generated_text'])
+def compter(texte,letter):
+    total = 0
+    for t in texte:
+        if t in letter:
+            total+=1
+    return total
+# decouper le texte
+mots = phrase.split()
+taille = [len(m) for m in mots]
+inventaire = {}
+for t in phrase:
+    if t in voyelles:
+        inventaire[t]=inventaire.get(t,0)+1
+print(taille)
+print(inventaire)
 
-
-if __name__ == "__main__":
-    main()
+resultat=compter(phrase,voyelles)
+print("nombre de voyelles: ",resultat)
