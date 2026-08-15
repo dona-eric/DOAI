@@ -1,3 +1,4 @@
+from sympy.parsing.sympy_parser import TOKEN
 import os
 import pathlib
 import requests
@@ -13,3 +14,7 @@ LLAMA_PARSE_API_KEY = os.getenv("LLAMA_PARSE_API_KEY")
 QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
 QDRANT_URL = "https://9825a19f-edf3-46a3-b7b7-cbe118083f9e.us-west-1-0.aws.cloud.qdrant.io"
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
+TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
+TOKEN_HUGGINGFACE = os.getenv("HUGGINGFACE_TOKEN")
+REPO_ID="Qwen/Qwen3.8-2.4T-A95B"
+IMOLE_API_KEY = os.getenv("IMOLE_API_KEY")
