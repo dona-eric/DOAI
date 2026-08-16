@@ -198,3 +198,123 @@ section[data-testid="stSidebar"] hr {
 .nav-actions button.signup:hover {
     background: #1d4ed8;
 }
+
+/* ------------------------------------------------------------------ */
+/* FOOTER HTML/CSS                                                    */
+/* ------------------------------------------------------------------ */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15vh; /* Pousse le footer vers le bas sans casser le layout */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.footer-brand {
+    flex-shrink: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1E3A8A;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #1E3A8A;
+}
+
+.footer-links span {
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.footer-links span:hover {
+    text-decoration: underline;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.8rem;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 1.5rem;
+    color: #1E3A8A;
+    font-size: 1.2rem;
+}
+
+.footer-socials i {
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.footer-socials i:hover {
+    color: #2563EB;
+}
+
+.footer-copyright {
+    font-size: 0.75rem;
+    color: #1E3A8A;
+}
+
+/* ------------------------------------------------------------------ */
+/* RESPONSIVE DESIGN (MOBILE & TABLETTE)                              */
+/* ------------------------------------------------------------------ */
+@media (max-width: 768px) {
+    /* Navbar Mobile */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        white-space: normal;
+    }
+    
+    .nav-links {
+        margin-left: 0;
+        flex-wrap: wrap;
+        gap: 1rem;
+        width: 100%;
+    }
+    
+    .nav-actions {
+        margin-left: 0;
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    
+    /* Header Institutionnel Mobile */
+    .docmind-header {
+        padding: 1.5rem 1rem 1rem 1rem;
+    }
+    .docmind-header h1 {
+        font-size: 1.6rem;
+    }
+    .docmind-header p {
+        font-size: 0.75rem;
+    }
+    
+    /* Footer Mobile */
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    
+    .footer-right {
+        align-items: center;
+    }
+    
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

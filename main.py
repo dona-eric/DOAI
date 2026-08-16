@@ -289,3 +289,29 @@ else:
             "content": answer, 
             "sources": sources
         })
+
+# ------------------------------------------------------------------ #
+# Footer
+# ------------------------------------------------------------------ #
+st.markdown("""
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<div class="footer">
+    <div class="footer-brand">Hɛnnu AI</div>
+    <div class="footer-links">
+        <span>Accueil</span>
+        <span>À propos</span>
+        <span>Contact</span>
+        <span>CGU</span>
+        <span>Confidentialité</span>
+        <span>Mention légale</span>
+    </div>
+    <div class="footer-right">
+        <div class="footer-socials">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+        </div>
+        <div class="footer-copyright">DTech-Africa © 2026 . Tous droits réservés.</div>
+    </div>
+</div>
+""", unsafe_allow_html=True)
