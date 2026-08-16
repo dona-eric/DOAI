@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,600;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap');
+
+:root {
+    --green-deep: #0B4F3C;
+    --green-soft: #E4EEE9;
+    --paper: #F7F5EF;
+    --rust: #B5652D;
+    --gold: #C9A227;
+    --ink: #1F2A24;
+    --ink-muted: #5A6660;
+}
+
+html, body, [class*="css"] {
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: var(--ink);
+}
+
+.block-container {
+    padding-top: 4rem !important;
+    max-width: 1200px;
+}
+
+/* En-tête Institutionnel */
+.docmind-header {
+    background: var(--green-deep);
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+    padding: 2.5rem 4rem 1.5rem 4rem;
+    border-bottom: 5px solid var(--gold);
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0 4px 12px rgba(11, 79, 60, 0.15);
+}
+.docmind-header h1 {
+    font-family: 'Source Serif 4', serif;
+    color: #FFFFFF;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 0.01em;
+}
+.docmind-header p {
+    font-family: 'IBM Plex Sans', sans-serif;
+    color: var(--gold);
+    text-align: center;
+    font-size: 0.88rem;
+    margin: 0.3rem 0 0 0;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* Sidebar Customisation */
+section[data-testid="stSidebar"] {
+    background: var(--green-deep);
+}
+section[data-testid="stSidebar"] [data-testid="stMarkdownContainer"] p,
+section[data-testid="stSidebar"] [data-testid="stWidgetLabel"] p,
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3 {
+    color: #F7F5EF !important;
+}
+section[data-testid="stSidebar"] hr {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Chat Messages */
+[data-testid="stChatMessage"] {
+    background: #FFFFFF;
+    border: 1px solid #E2DED0;
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.8rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+
+/* Tampons de Citation */
+.stamp-container {
+    margin-top: 0.85rem;
+    padding-top: 0.6rem;
+    border-top: 1px dashed #E2DED0;
+}
+.stamp-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.03em;
+}
+.stamp-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.stamp {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.73rem;
+    color: var(--green-deep);
+    background: var(--green-soft);
+    border: 1.2px solid var(--green-deep);
+    border-radius: 4px;
+    padding: 0.3rem 0.55rem;
+    display: inline-block;
+    position: relative;
+    line-height: 1.2;
+}
+.stamp::after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    width: 6px;
+    height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+}
+.stamp b {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+/* ------------------------------------------------------------------ */
+/* NAVBAR HTML/CSS                                                    */
+/* ------------------------------------------------------------------ */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    white-space: nowrap;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.brand {
+    flex-shrink: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1E3A8A;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-shrink: 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #5A6660;
+    margin-left: 4rem; /* Ajout d'espacement avec le logo */
+}
+
+.nav-links span {
+    white-space: nowrap;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+.nav-links span:hover {
+    color: #1E3A8A;
+}
+.nav-links .active {
+    color: #2563EB;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+.nav-actions button {
+    background: #FFFFFF;
+    border: 1px solid #E2DED0;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--ink);
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+.nav-actions button:hover {
+    border-color: #b5b1a3;
+    background: #f7f5ef;
+}
+
+.nav-actions button.signup {
+    background: #2563EB; /* primary blue matching AIVOKA */
+    color: #FFFFFF;
+    border: none;
+}
+.nav-actions button.signup:hover {
+    background: #1d4ed8;
+}
