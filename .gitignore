@@ -5,3 +5,4 @@ data/
 *.log
 .agents/
 =2.8
+cache/
