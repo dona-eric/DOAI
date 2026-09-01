@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Any, Dict, List, Optional
 
-from app.core.config import (QDRANT_API_KEY, QDRANT_URL, PINECONE_API_KEY, VECTOR_PROVIDER, EMBEDDING_DIMENSION)
+from app.core.config import (QDRANT_API_KEY,timer, QDRANT_URL, PINECONE_API_KEY, VECTOR_PROVIDER, EMBEDDING_DIMENSION)
 from app.core.loger import setup_logging
 from qdrant_client import QdrantClient
 from qdrant_client.models import Distance, VectorParams, PointStruct
@@ -23,20 +23,14 @@ class VectorStoreClient(ABC):
         """Cree la collection/l'index si elle n'existe pas deja."""
 
     @abstractmethod
-    def upsert(
-        self,
-        ids: List[str],
-        vectors: List[List[float]],
-        metadatas: List[Dict[str, Any]],
-    ) -> None:
-
+    def upsert(self, ids: List[str], vectors: List[List[float]], metadatas: List[Dict[str, Any]]) -> None:
         """Insere ou met a jour des vecteurs avec leurs metadata."""
 
     @abstractmethod
     def query(
         self,
-        vector: List[float],
-        top_k: int = 5,
+        vector: List[float], 
+        top_k: int = 5, 
         filters: Optional[Dict[str, Any]] = None,
     ) -> List[Dict[str, Any]]:
         """Recherche les top_k vecteurs les plus proches, avec filtres optionnels sur metadata."""
@@ -57,11 +51,11 @@ class QdrantVectorStore(VectorStoreClient):
 
     def _connect(self) -> None:
         try:
-            self.client = QdrantClient(api_key=QDRANT_API_KEY, url=QDRANT_URL)
+            self.client = QdrantClient(api_key=QDRANT_API_KEY, url=QDRANT_URL,timeout=120)
             logger.info("Client Qdrant connecte avec succes")
         except Exception as e:
             raise RuntimeError(f"Erreur lors de la connexion au client Qdrant: {e}") from e
-
+    @timer
     def create_or_get_index(self) -> None:
         try:
             if not self.client.collection_exists(self.collection_name):
@@ -78,13 +72,15 @@ class QdrantVectorStore(VectorStoreClient):
                 logger.info(f"Collection '{self.collection_name}' deja existante")
         except Exception as e:
             raise RuntimeError(f"Erreur lors de la creation de la collection Qdrant: {e}") from e
+    @timer
+    def upsert(self, ids: List[str], vectors: List[List[float]], metadatas: List[Dict[str, Any]]) -> None:
 
-    def upsert(self, ids: List[str], 
-    vectors: List[List[float]], 
-    metadatas: List[Dict[str, Any]]
-    ) -> None:
         points = [
-            PointStruct(id=point_id, vector=vector, payload=metadata)
+            PointStruct(
+                id=point_id, 
+                vector=vector, 
+                payload=metadata
+            )
             for point_id, vector, metadata in zip(ids, vectors, metadatas)
         ]
         self.client.upsert(collection_name=self.collection_name, points=points)
