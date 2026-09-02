@@ -14,7 +14,7 @@ from app.core.config import LLAMA_PARSE_API_KEY
 from llama_cloud import LlamaCloud
 
 dotenv.load_dotenv()
-logger = setup_logging()
+logger = setup_logging(__name__)
 
 custom_httpx_client = httpx.Client(timeout=httpx.Timeout(300.0, connect=60.0))
 
